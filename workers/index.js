@@ -8,8 +8,17 @@ addEventListener('fetch', event => {
 
 async function handleRequest(request, env) {
   const { searchParams } = new URL(request.url);
-  const code = searchParams.get('code');
 
+  if (url.pathname.endsWith('/cardswipe')) {
+    code = searchParams.get('code');
+    return new Response((bagereader(code)), { headers: { 'Content-Type': 'text/html' } });
+  }
+
+
+
+
+
+function bagereader(code) {}
   // List of 50 correct codes
   const correctCodes = ['9457', '6983', '1234', '8765', '4321', '9876',
   '3456', '7890', '2345', '6789', '5432', '8901', '5678', '9012', '3210',
