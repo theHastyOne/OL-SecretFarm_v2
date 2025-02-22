@@ -17,10 +17,10 @@ async function handleRequest(request, env) {
   return new Response('Not Found', { status: 404 });
 
 
+}
 
 
-
-function bagereader(code) {}
+function bagereader(code) {
   // List of 50 correct codes
   const correctCodes = ['9457', '6983', '1234', '8765', '4321', '9876',
   '3456', '7890', '2345', '6789', '5432', '8901', '5678', '9012', '3210',
