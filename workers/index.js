@@ -16,17 +16,11 @@ async function handleRequest(request, env) {
     return (bagereader(code));
   }
   if (url.pathname.endsWith('/ostrich/farm/hacking/ctf-challenges/ostrich-breeding/ostrich-encryption/ostrich-passwords/ostrich-chicks-ctf/ostrich-feed-injections/ostrich-exploits/ostrich-feathers-steganography/ostrich-meat-cipher/ostrich-leather-cracking/')){
-    return (victory);
+    return new Response(victoryHTML, { headers: { 'Content-Type': 'text/html' } });
   }
 
   return new Response('Not Found', { status: 404 });
-
-
-
-
-
 }
-
 
 function bagereader(code) {
   // List of 50 correct codes
@@ -57,12 +51,4 @@ function bagereader(code) {
       headers: { 'Content-Type': 'text/html' },
     });
   }
-}
-
-function victory() {
-  return new Response(victoryHTML, {
-    headers: {
-      'content-type': 'text/html;charset=UTF-8'
-    }
-  });
 }
