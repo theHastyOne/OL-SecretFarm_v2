@@ -35,7 +35,6 @@ function bagereader(code) {
       headers: { 'Content-Type': 'text/html' },
     });
   } else if (correctCodes.includes(code)) {
-    let currentValue = await Hit_Counts.get('CardCode');
     return new Response(correctResponseHTML, {
       headers: { 'Content-Type': 'text/html' },
     });
