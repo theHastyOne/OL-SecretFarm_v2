@@ -1,0 +1,82 @@
+<html>
+ <head>
+   <title>Swipe Card Code</title>
+    <style>
+     body {
+       font-family: Arial, sans-serif;
+       background-color: #f0f0f0;
+       background-image: url("https://www.myfreetextures.com/wp-content/uploads/2012/05/2011-06-11-09560.jpg");
+       background-size: cover;
+       background-position: center;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+     }
+     .container {
+       padding: 20px;
+       border-radius: 8px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       max-width: 400px;
+       width: 100%;
+       background-image: url("https://www.pngplay.com/wp-content/uploads/8/Steel-Plate-Download-Free-PNG.png");
+       background-size: cover;
+       background-position: left;
+     }
+     h1 {
+       text-align: center;
+     }
+     form {
+       display: flex;
+       flex-direction: column;
+     }
+     label {
+       margin-bottom: 5px;
+     }
+     input[type="password"] {
+       padding: 10px;
+       margin-bottom: 10px;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       text-align: center;
+       background-color: black;
+       color: red;
+     }
+     input[type="submit"] {
+       padding: 10px;
+       background-color: #4caf50;
+       color: white;
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+       transition: background-color 0.3s ease;
+     }
+     input[type="submit"]:hover {
+       background-color: #45a049;
+     }
+   </style>
+</head>
+ <body>
+   <div class="container">
+     <h1><font color=red>INVALID CODE</font></h1>
+     <h1>Swipe Card or Enter Code</h1>
+     <form method="get">
+       <input type="password" id="code" name="code" required>
+       <input type="submit" value="Submit">
+     </form>
+   </div>
+   <script>
+   document.addEventListener("DOMContentLoaded", function() {
+     var numericInput = document.getElementById("code");
+   
+     numericInput.addEventListener("input", function(event) {
+       var currentValue = event.target.value;
+       var filteredValue = currentValue.replace(/[^0-9]/g, ''); // Filter out non-numeric characters
+       event.target.value = filteredValue; // Update input field with filtered value
+     });
+   });
+   </script>
+ </body>
+</html>
