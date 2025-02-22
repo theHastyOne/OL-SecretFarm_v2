@@ -2,6 +2,7 @@ import formHTML from "./login.html";
 import congratsResponseHTML from "./secret.html"
 import correctResponseHTML from "./granted.html"
 import accessDeniedHTML from "./denied.html"
+import victoryHTML from "./victory.html"
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
@@ -14,7 +15,14 @@ async function handleRequest(request, env) {
     code = searchParams.get('code');
     return (bagereader(code));
   }
+  if (url.pathname.endsWith('/ostrich/farm/hacking/ctf-challenges/ostrich-breeding/ostrich-encryption/ostrich-passwords/ostrich-chicks-ctf/ostrich-feed-injections/ostrich-exploits/ostrich-feathers-steganography/ostrich-meat-cipher/ostrich-leather-cracking/')){
+    return (victory);
+  }
+
   return new Response('Not Found', { status: 404 });
+
+
+
 
 
 }
@@ -49,4 +57,12 @@ function bagereader(code) {
       headers: { 'Content-Type': 'text/html' },
     });
   }
+}
+
+function victory() {
+  return new Response(victoryHTML, {
+    headers: {
+      'content-type': 'text/html;charset=UTF-8'
+    }
+  });
 }
