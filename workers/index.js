@@ -12,7 +12,7 @@ async function handleRequest(request, env) {
 
   if (url.pathname.endsWith('/cardswipe')) {
     code = searchParams.get('code');
-    return new Response((bagereader(code)), { headers: { 'Content-Type': 'text/html' } });
+    return new Response(bagereader(code));
   }
   return new Response('Not Found', { status: 404 });
 
