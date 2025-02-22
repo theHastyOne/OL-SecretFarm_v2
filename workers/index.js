@@ -1,7 +1,7 @@
-import formHTML from "./login.html";
-import congratsResponseHTML from "./secret.html"
-import correctResponseHTML from "./granted.html"
-import accessDeniedHTML from "./denied.html"
+import formHTML from "./login.html?raw";
+import congratsResponseHTML from "./secret.html?raw"
+import correctResponseHTML from "./granted.html?raw"
+import accessDeniedHTML from "./denied.html?raw"
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
