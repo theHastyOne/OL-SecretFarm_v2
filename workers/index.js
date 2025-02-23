@@ -8,6 +8,8 @@ import ftphelpHTML from "./ftp-help.html"
 import webmailHTML from "./webmail.html"
 import webmailloginHTML from "./webmail-login.html"
 import webmailfailHTML from "./webmail-fail.html"
+import welcomeHTML from "./CTFwelcome.html"
+
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
@@ -25,6 +27,9 @@ async function handleRequest(request, env) {
   }
   if (url.pathname.endsWith('/ftp-help.html')){
     return new Response(ftphelpHTML, { headers: { 'Content-Type': 'text/html' } });
+  }
+  if (url.pathname.endsWith('/welcome.html')){
+    return new Response(welcomeHTML, { headers: { 'Content-Type': 'text/html' } });
   }
   if (url.pathname.endsWith('/webmail')) {
     if (request.method === 'POST') {

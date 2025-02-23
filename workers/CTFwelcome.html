@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secret Farm Webmail Login</title>
+    <title>Secret Farm</title>
     <style>
         body {
             margin: 0;
@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
         }
         .background {
-            background-image: url('https://secretfarm.ostrichlab.io/image.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+            background-image: url('image.jpg'); /* Replace 'background-image.jpg' with your actual background image */
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -27,6 +27,7 @@
         }
         .content {
             position: relative;
+            
             text-align: center;
             padding: 50px;
             color: white;
@@ -36,6 +37,7 @@
         }
         .intro {
             position: relative;
+            
             text-align: center;
             color: white;
             width: 600px;
@@ -60,46 +62,34 @@
             color: white;
             text-decoration: none;
         }
-        form {
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.7)
-        }
-        input[type="text"],
-        input[type="password"],
-        input[type="submit"] {
-          width: 100%;
-          padding: 10px;
-          margin-top: 10px;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          box-sizing: border-box;
-        }
-        input[type="submit"] {
-          background-color: #4CAF50;
-          color: white;
-          border: none;
-          cursor: pointer;
-        }
-        input[type="submit"]:hover {
-          background-color: #45a049;
-        }
     </style>
 </head>
 <body>
     <div class="background">
         <div class="overlay"></div>
         <div class="content">
-            <h1>Secret Farm Webmail Login</h1>
-            <form method="post">
-              <input type="text" name="email" placeholder="Email" required><br>
-              <input type="password" name="password" placeholder="Password" required><br>
-              <input type="submit" value="Login">
-            </form>
+            <h1>Tips and Tricks</h1>
+            <div class="intro">
+                <h2>Tools</h2>
+                <ul>
+                    <li><a href="https://www.wireshark.org/">https://www.wireshark.org/</a></li>
+                    <li><a href="http://ostrichlab.io/sss/">http://ostrichlab.io/sss/</a></li>
+                    <li><a href="https://www.lirnberger.com/tools/pgpdump/">https://www.lirnberger.com/tools/pgpdump/</a></li>
+                    <li><a href="https://www.aperisolve.com/">https://www.aperisolve.com/</a></li>
+                </ul>
+                <h2>Popular Unencrypted network protocols and ports</h2>
+                <ul>
+                    <li>FTP 21</li>
+                    <li>Telnet 23</li>
+                    <li>SMTP 25, 2525</li>
+                    <li>DNS 53</li>
+                    <li>TFTP 69</li>
+                    <li>HTTP 80</li>
+                    <li>LDAP 389</li>
+                </ul>
+                <h2>CTF Packet Capture Download</h2>
+                <p><a href="https://ostrichlab.io/internctf/CTF.pcapng">https://ostrichlab.io/internctf/CTF.pcapng</a></p>
+            </div>
         </div>
         <nav>
             <ul>
