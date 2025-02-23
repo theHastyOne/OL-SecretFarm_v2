@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Secret Farm Webmail Login</title>
+          <style>
+              body {
+                  margin: 0;
+                  padding: 0;
+                  font-family: Arial, sans-serif;
+              }
+              .background {
+                  background-image: url('https://secretfarm.ostrichlab.io/image.jpg'); /* Replace 'background-image.jpg' with your actual background image */
+                  background-size: cover;
+                  background-position: center;
+                  height: 100vh;
+                  position: relative;
+              }
+              .overlay {
+                  background-color: rgba(0, 0, 0, 0.5); /* Change the last value (0.5) to adjust the opacity of the overlay */
+                  position: absolute;
+                  top: 50px;
+                  left: 10%;
+                  width: 80%;
+                  height: 90%;
+              }
+              .content {
+                  position: relative;
+                  text-align: center;
+                  padding: 50px;
+                  color: white;
+                  width: 75%;
+                  text-align: center; 
+                  margin: 0 auto;
+              }
+              .intro {
+                  position: relative;
+                  text-align: center;
+                  color: white;
+                  width: 600px;
+                  margin: 0 auto;
+                  text-align: left;
+              }
+              nav {
+                  position: absolute;
+                  top: 20px;
+                  right: 20px;
+              }
+              nav ul {
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+              }
+              nav ul li {
+                  display: inline-block;
+                  margin-left: 20px;
+              }
+              nav ul li a {
+                  color: white;
+                  text-decoration: none;
+              }
+              form {
+                  max-width: 300px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  background-color: rgba(0, 0, 0, 0.7)
+              }
+              input[type="text"],
+              input[type="password"],
+              input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+              }
+              input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+              }
+              input[type="submit"]:hover {
+                background-color: #45a049;
+              }
+              p {
+                word-break: break-all;
+                white-space: normal;
+                }
+          </style>
+      </head>
+      <body>
+          <div class="background">
+              <div class="overlay"></div>
+              <div class="content">
+                  <h1>Secret Farm Webmail Login</h1>
+                  <form method="post">
+                    <input type="text" name="email" placeholder="Email" required><br>
+                    <input type="password" name="password" placeholder="Password" required><br>
+                    <input type="submit" value="Login">
+                    <p><font color="GREEN">Secret Key 1 of 3 Found</font></p>
+                    <p>80145dc4bd1c72610266ac3ec78bbd58fda72197025e4b30cad58dd6c31b3e58512f74a7ec14c549a08de79c5c40540190c768ee3a47c7c0af15d4be3d51759e4ea43b2bd0833d8fd24ab501b71a2c8f8a759da00b6cc0d9acdd0f22eca98ea1a747b3658b22dc8da685b5e53d43755bb98cf27a007c66122199b317f271c563e245cb69c8086d6d8b8ec788e6b0c60b226196e2b5b960c1ba990eb0e4f562662a48cd1d18ae179fa7141f6da31bc2fff2273a28b35ae3d7ef0a1b83a588d44a44083706cd04f2cca0fba7e66fd61072dace956b08aa1e4ff4ab38375e39b7cad9139c212298078e86b508fe4329e634090c742bf79ec14af2f302538a728da815a84d5e05b21684e7076db31bce71c64e208e500d3c86c521b039a3edeb10b8e338021116d095f0f1a5f3a7bf82a73314193386c66d61d596f9f1b7c83635c1719e3bf4e8bde0870354f6895a2c7fd08dabd2dccde88acd3551c66d10a1005acfd4ceb672bd532b0392363442cc4ef8c6bc3fd35c3417f537c5b9df934c65b05ce</p>
+                  </form>
+              </div>
+        <nav>
+            <ul>
+                <li><a href="https://secretfarm.ostrichlab.io/">Home</a></li>
+                <li><a href="https://secretfarm.ostrichlab.io/ftp-help.html">FTP Access</a></li>
+                <li><a href="https://secretfarm.ostrichlab.io/webmail">Webmail Login</a></li>
+                <li><a href="mailto:no-reply@ostrichlab.io">Contact</a></li>
+            </ul>
+        </nav>
+          </div>
+      </body>
+      </html>

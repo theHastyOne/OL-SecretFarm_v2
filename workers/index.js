@@ -5,6 +5,9 @@ import accessDeniedHTML from "./denied.html"
 import victoryHTML from "./victory.html"
 import homepageHTML from "./homepage.html"
 import ftphelpHTML from "./ftp-help.html"
+import webmailHTML from "./webmail.html"
+import webmailloginHTML from "./webmail-login.html"
+import webmailfailHTML from "./webmail-fail.html"
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
@@ -22,6 +25,27 @@ async function handleRequest(request, env) {
   }
   if (url.pathname.endsWith('/ftp-help.html')){
     return new Response(ftphelpHTML, { headers: { 'Content-Type': 'text/html' } });
+  }
+  if (url.pathname.endsWith('/webmail')) {
+    if (request.method === 'POST') {
+      const formData = await request.formData()
+      const email = formData.get('email')
+      const password = formData.get('password')
+      const allowedCredentials = [
+        { email: 'shamir@secretfarm.ostrichlab.io', password: 'SharedSecret' },
+        { email: 'SecretSharing@secretfarm.ostrichlab.io', password: 'https://ostrichlab.io/sss/' },
+        { email: 'This_Is_CTF_Hint', password: 'https://ostrichlab.io/sss/' },
+      ]
+      const isValid = allowedCredentials.some(
+        cred => cred.email === email && cred.password === password
+      )
+      if (isValid){ 
+        return new Response(webmailloginHTML, { headers: { 'Content-Type': 'text/html' } });
+      } else {
+        return new Response(webmailfailHTML, { headers: { 'Content-Type': 'text/html' } });
+      }
+    }
+    return new Response(webmailHTML, { headers: { 'Content-Type': 'text/html' } });
   }
 
   return new Response(homepageHTML, { headers: { 'Content-Type': 'text/html' } });
