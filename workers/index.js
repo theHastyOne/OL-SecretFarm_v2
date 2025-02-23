@@ -25,6 +25,7 @@ async function handleRequest(request, env) {
   }
 
   return new Response(homepageHTML, { headers: { 'Content-Type': 'text/html' } });
+}
 
 function bagereader(code) {
   // List of 50 correct codes
