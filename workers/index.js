@@ -17,6 +17,11 @@ addEventListener('fetch', event => {
 async function handleRequest(request, env) {
   const { searchParams } = new URL(request.url);
   const url = new URL(request.url);
+  if (url.pathname.includes("/cdn/")) {
+    const newDomain = "https://ostrichlab.io";
+    const newUrl = newDomain + url.pathname + url.search;
+    return Response.redirect(newUrl, 301);
+  }
 
   if (url.pathname.endsWith('/cardswipe')) {
     code = searchParams.get('code');
