@@ -3,6 +3,8 @@ import congratsResponseHTML from "./secret.html"
 import correctResponseHTML from "./granted.html"
 import accessDeniedHTML from "./denied.html"
 import victoryHTML from "./victory.html"
+import homepageHTML from "./homepage.html"
+import ftphelpHTML from "./ftp-help.html"
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
@@ -18,9 +20,11 @@ async function handleRequest(request, env) {
   if (url.pathname.endsWith('/ostrich/farm/hacking/ctf-challenges/ostrich-breeding/ostrich-encryption/ostrich-passwords/ostrich-chicks-ctf/ostrich-feed-injections/ostrich-exploits/ostrich-feathers-steganography/ostrich-meat-cipher/ostrich-leather-cracking/')){
     return new Response(victoryHTML, { headers: { 'Content-Type': 'text/html' } });
   }
+  if (url.pathname.endsWith('/ftp-help.html')){
+    return new Response(ftphelpHTML, { headers: { 'Content-Type': 'text/html' } });
+  }
 
-  return new Response('Not Found', { status: 404 });
-}
+  return new Response(homepageHTML, { headers: { 'Content-Type': 'text/html' } });
 
 function bagereader(code) {
   // List of 50 correct codes
