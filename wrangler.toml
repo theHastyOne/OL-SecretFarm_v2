@@ -1,3 +1,6 @@
 name = "ol-secretfarm-v2"
 compatibility_date = "2025-02-18"
 main = "workers/index.js"
+routes = [
+  { pattern = "secretfarm.ostrichlab.io/*", zone_name= "ostrichlab.io"}
+]
