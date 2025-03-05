@@ -23,7 +23,7 @@ async function handleRequest(request, env) {
     return Response.redirect(newUrl, 301);
   }
 
-  if (url.pathname.endsWith('/cardswipe')) {
+  if (url.pathname.endsWith('/cardlogin')) {
     code = searchParams.get('code');
     return (bagereader(code));
   }
