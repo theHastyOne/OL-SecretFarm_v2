@@ -31,7 +31,7 @@ async function handleRequest(request, env) {
   if (url.pathname.endsWith('/ostrich/farm/hacking/ctf-challenges/ostrich-breeding/ostrich-encryption/ostrich-passwords/ostrich-chicks-ctf/ostrich-feed-injections/ostrich-exploits/ostrich-feathers-steganography/ostrich-meat-cipher/ostrich-leather-cracking/')){
     return new Response(victoryHTML, { headers: { 'Content-Type': 'text/html' } });
   }
-  if (url.pathname.includes('flights/securityprotocol/2024/special-operations/encrypted-flight-data-center/access-authorized')){
+  if (url.pathname.startsWith('/cyberneticostrich/exploration/flights/securityprotocol/2024/special-operations/encrypted-flight-data-center/access-authorized/flightlog')){
     return new Response(webmailsecretHTML, { headers: { 'Content-Type': 'text/html' } });
   }
   if (url.pathname.endsWith('/ftp-help.html')){
